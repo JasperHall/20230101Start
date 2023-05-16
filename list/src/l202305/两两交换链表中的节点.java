@@ -1,5 +1,7 @@
 package l202305;
 
+import java.util.List;
+
 /**
  * https://leetcode.cn/problems/swap-nodes-in-pairs/
  * @Version 1.0
@@ -37,6 +39,25 @@ public class 两两交换链表中的节点 {  // 24
             }
 
             return dummyHead.next;//返回虚拟头节点的下一个节点
+        }
+
+        /**
+         * 递归法
+         * @param head
+         * @return
+         */
+        public ListNode swapPairs2(ListNode head) {
+            // base case 退出提交
+            if (head==null || head.next==null) return head;
+            // 获得当前节点的下一个节点
+            ListNode nextRes = head.next;
+            // 进行递归
+            ListNode newNode = swapPairs2(nextRes.next);
+            // 这里进行交换
+            nextRes.next = head;
+            head.next = newNode;
+
+            return nextRes;
         }
     }
 }

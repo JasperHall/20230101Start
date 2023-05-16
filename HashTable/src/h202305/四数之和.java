@@ -28,7 +28,7 @@ public class 四数之和 {  // 18
             for (int i=0; i<nums.length; i++){
                 // 如果最小值大于0则直接返回, 如果最小值大于目标值则直接返回. nums[i] > target 直接返回, 剪枝操作
                 // 同时满足大于0,大于目标值是因为如果target是负数时, 和是最小的
-                if (nums[i]>0 && nums[i]>target) return result;
+                if (nums[i]>0 && nums[i]>target) return result;  // 剪枝
 
                 if (i>0 && nums[i-1]==nums[i]) continue;  // 对最左边的i进行去重, 第一次去重
 

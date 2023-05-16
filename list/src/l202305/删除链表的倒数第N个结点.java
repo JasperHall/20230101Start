@@ -17,6 +17,13 @@ public class 删除链表的倒数第N个结点 {  // 19
         myLinkedList.creatList();
 
         ListNode res = solution.removeNthFromEnd(myLinkedList.head, 2);
+
+        ListNode cur = res;
+        while (cur != null){
+            System.out.print(cur.val+", ");
+            cur = cur.next;
+        }
+        System.out.println("\n"+"链表打印完成!");
     }
 
     /**
@@ -29,7 +36,7 @@ public class 删除链表的倒数第N个结点 {  // 19
         public void creatList(){
             ListNode listNode1 = new ListNode(11);
             ListNode listNode2 = new ListNode(22);
-            ListNode listNode3 = new ListNode(22);
+            ListNode listNode3 = new ListNode(33);
             ListNode listNode4 = new ListNode(44);
             ListNode listNode5 = new ListNode(55);
 
