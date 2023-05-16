@@ -252,7 +252,7 @@ public ListNode detectCycle(ListNode head) {
     return null;
 }
 ```
-[LeetCode优质题解](https://leetcode.cn/problems/linked-list-cycle-ii/solution/linked-list-cycle-ii-kuai-man-zhi-zhen-shuang-zhi-/)
+[142.环形链表II_LeetCode优质题解](https://leetcode.cn/problems/linked-list-cycle-ii/solution/linked-list-cycle-ii-kuai-man-zhi-zhen-shuang-zhi-/)
 
 
 
