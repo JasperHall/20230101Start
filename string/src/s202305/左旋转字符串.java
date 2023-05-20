@@ -37,7 +37,7 @@ public class 左旋转字符串 {  // 剑指offer58
         }
 
         /**
-         * 不申请额外的空间
+         * 申请额外的空间
          * 1. 反转区间为前 n 的子串
          * 2. 反转区间为 n 到末尾的子串
          * 3. 反转整个字符串
@@ -60,6 +60,32 @@ public class 左旋转字符串 {  // 剑指offer58
                 sb.setCharAt(end, temp);
                 start++;
                 end--;
+            }
+        }
+
+        /**
+         * 解法三  不使用额外空间
+         * 空间复杂度：O(1)。用原始数组来进行反转操作
+         *
+         * // 思路为：先整个字符串反转，再反转前面的，最后反转后面 n 个
+         * @param s
+         * @param n
+         * @return
+         */
+        public String reverseLeftWords3(String s, int n) {
+            char[] chars = s.toCharArray();
+            reverseAA(chars, 0, chars.length - 1);
+            reverseAA(chars, 0, chars.length - 1 - n);
+            reverseAA(chars, chars.length - n, chars.length - 1);
+            return new String(chars);
+        }
+        private void reverseAA(char[] chars, int left, int right) {
+            while (left < right) {
+                chars[left] ^= chars[right];
+                chars[right] ^= chars[left];
+                chars[left] ^= chars[right];
+                left++;
+                right--;
             }
         }
     }
