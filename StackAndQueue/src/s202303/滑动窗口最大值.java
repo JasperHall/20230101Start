@@ -1,6 +1,7 @@
 package s202303;
 
 import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -13,12 +14,19 @@ import java.util.LinkedList;
  */
 public class 滑动窗口最大值 {
 
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        int[] nums = new int[]{-7,-8,7,5,7,1,6,0};  // [-7,-8,7,5,7,1,6,0]
+        int k = 3;
+        int[] res = solution.maxSlidingWindow(nums, k);
+        System.out.println(Arrays.toString(res));
+    }
 
     /**
      * 解法一
      * 自定义数组
      */
-    class MyQueue {
+    static class MyQueue {
         Deque<Integer> deque = new LinkedList<>();
         //弹出元素时, 比较当前要弹出的数值是否等于队列出口的数值, 如果相等则弹出
         //同时判断队列当前是否为空
@@ -40,7 +48,7 @@ public class 滑动窗口最大值 {
             return deque.peek(); //peek,返回队首元素
         }
     }
-    class Solution {
+    static class Solution {
         public int[] maxSlidingWindow(int[] nums, int k) {
             if (nums.length == 1){
                 return nums;
