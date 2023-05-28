@@ -44,9 +44,9 @@ public class 二叉树的前序遍历 {  // 144
         public void preorder(TreeNode root, List<Integer> result){
             if (root == null) return;
 
-            result.add(root.value);
-            preorder(root.left_Node, result);
-            preorder(root.right_Node, result);
+            result.add(root.val);
+            preorder(root.left, result);
+            preorder(root.right, result);
 
         }
 
@@ -63,10 +63,10 @@ public class 二叉树的前序遍历 {  // 144
             stack.push(root);
             while (!stack.isEmpty()){
                 TreeNode node = stack.pop();
-                result.add(node.value);
+                result.add(node.val);
 
-                if (node.right_Node != null) stack.push(node.right_Node);
-                if (node.left_Node != null) stack.push(node.left_Node);
+                if (node.right != null) stack.push(node.right);
+                if (node.left != null) stack.push(node.left);
             }
 
             return result;
@@ -85,8 +85,8 @@ public class 二叉树的前序遍历 {  // 144
                 TreeNode node = st.peek();
                 if (node != null) {
                     st.pop(); // 将该节点弹出，避免重复操作，下面再将右中左节点添加到栈中
-                    if (node.right_Node!=null) st.push(node.right_Node);  // 添加右节点（空节点不入栈）
-                    if (node.left_Node!=null) st.push(node.left_Node);    // 添加左节点（空节点不入栈）
+                    if (node.right!=null) st.push(node.right);  // 添加右节点（空节点不入栈）
+                    if (node.left!=null) st.push(node.left);    // 添加左节点（空节点不入栈）
                     st.push(node);                          // 添加中节点
                     st.push(null); // 中节点访问过，但是还没有处理，加入空节点做为标记。
 
@@ -94,7 +94,7 @@ public class 二叉树的前序遍历 {  // 144
                     st.pop();           // 将空节点弹出
                     node = st.peek();    // 重新取出栈中元素
                     st.pop();
-                    result.add(node.value); // 加入到结果集
+                    result.add(node.val); // 加入到结果集
                 }
             }
             return result;

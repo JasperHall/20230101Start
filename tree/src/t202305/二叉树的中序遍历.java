@@ -44,9 +44,9 @@ public class 二叉树的中序遍历 {  // 94
             if (root == null) return;
 
             // 先左, 再中, 再右
-            inorder(root.left_Node, list);
-            list.add(root.value);    // 注意这一句add
-            inorder(root.right_Node, list);
+            inorder(root.left, list);
+            list.add(root.val);    // 注意这一句add
+            inorder(root.right, list);
         }
 
         /**
@@ -64,11 +64,11 @@ public class 二叉树的中序遍历 {  // 94
             while (cur != null || !stack.isEmpty()){
                 if (cur != null){
                     stack.push(cur);
-                    cur = cur.left_Node;
+                    cur = cur.left;
                 } else {
                     cur = stack.pop();  // 弹出
-                    result.add(cur.value);
-                    cur = cur.right_Node;
+                    result.add(cur.val);
+                    cur = cur.right;
                 }
             }
             return result;
@@ -90,17 +90,17 @@ public class 二叉树的中序遍历 {  // 94
                 if (node != null){
                     stack.pop();  // 将该节点弹出，避免重复操作，下面再将右中左节点添加到栈中
 
-                    if (node.right_Node != null) stack.push(node.right_Node);  // 添加右节点(空节点不入栈)
+                    if (node.right != null) stack.push(node.right);  // 添加右节点(空节点不入栈)
                     stack.push(node);  // 添加中间节点
                     stack.push(null); // 中间节点访问过, 但是还没有处理, 加入空节点作为标记
 
-                    if (node.left_Node != null) stack.push(node.left_Node);  // 添加左节点（空节点不入栈）
+                    if (node.left != null) stack.push(node.left);  // 添加左节点（空节点不入栈）
 
                 } else {  // 只有遇到空节点的时候，才将下一个节点放进结果集
                     stack.pop();  // 将空节点弹出
                     node = stack.peek();  // 重新获取栈中元素
                     stack.pop();
-                    result.add(node.value);  // 加入到结果集
+                    result.add(node.val);  // 加入到结果集
                 }
             }
             return result;

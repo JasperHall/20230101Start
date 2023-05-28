@@ -26,19 +26,19 @@ public class BinaryTree {
 
         //建立二叉树
         while (true){
-            if (value < currentNode.value){ //在左子树
-                if (currentNode.left_Node == null){
-                    currentNode.left_Node = new TreeNode(value);
+            if (value < currentNode.val){ //在左子树
+                if (currentNode.left == null){
+                    currentNode.left = new TreeNode(value);
                     return;
                 }else {
-                    currentNode = currentNode.left_Node;
+                    currentNode = currentNode.left;
                 }
             }else {  //在右子树
-                if (currentNode.right_Node == null){
-                    currentNode.right_Node = new TreeNode(value);
+                if (currentNode.right == null){
+                    currentNode.right = new TreeNode(value);
                     return;
                 }else {
-                    currentNode = currentNode.right_Node;
+                    currentNode = currentNode.right;
                 }
             }
         }

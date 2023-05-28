@@ -8,14 +8,14 @@ package t202305;
  * @Date:2023/3/26 20:23
  */
 public class TreeNode {
-    int value;
-    TreeNode left_Node;
-    TreeNode right_Node;
+    int val;
+    TreeNode left;
+    TreeNode right;
     TreeNode() {}
-    TreeNode(int val) { this.value = val; }
+    TreeNode(int val) { this.val = val; }
     TreeNode(int val, TreeNode left_Node, TreeNode right_Node) {
-        this.value = val;
-        this.left_Node = left_Node;
-        this.right_Node = right_Node;
+        this.val = val;
+        this.left = left_Node;
+        this.right = right_Node;
     }
 }
