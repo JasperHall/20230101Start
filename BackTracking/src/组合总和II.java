@@ -48,8 +48,10 @@ public class 组合总和II {
                 used[i] = true;
                 sum += candidates[i];
                 path.add(candidates[i]);
+
                 // 每个节点仅能选择一次，所以从下一位开始
                 backTracking(candidates, target, i+1);
+
                 used[i] = false;
                 sum -= candidates[i];
                 path.removeLast();
