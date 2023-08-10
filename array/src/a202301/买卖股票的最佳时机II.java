@@ -6,7 +6,7 @@ package a202301;
  * @Date:2023/1/15 23:18
  */
 //https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/
-public class 买卖股票的最佳时机2 {//122题
+public class 买卖股票的最佳时机II {//122题
     class Solution {
         /**
          * 动态规划1
