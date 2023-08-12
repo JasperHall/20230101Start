@@ -15,7 +15,7 @@
 
 1. 继续理解 203.移除链表元素 虚拟节点
 2. 学一下 707.设计链表 的双链表
-3. 深度理解一下 206.反转链表 的递归法
+3. 深度理解一下 206.DataStructure.反转链表 的递归法
 
 <a name="P3DdU"></a>
 # [203.移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)
@@ -222,7 +222,7 @@ class MyLinkedList {
 ```
 时间不多了, 先光写一个单链表的设计, 有空复习下双链表
 <a name="Cf2VZ"></a>
-# [206.反转链表](https://leetcode.cn/problems/reverse-linked-list/)
+# [206.DataStructure.反转链表](https://leetcode.cn/problems/reverse-linked-list/)
 看到题目的第一反映还是双指针, 对递归的掌握还是有问题的
 <a name="K9NHR"></a>
 ## 双指针法

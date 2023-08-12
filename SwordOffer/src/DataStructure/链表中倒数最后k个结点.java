@@ -1,3 +1,5 @@
+package DataStructure;
+
 /**
  * https://www.nowcoder.com/practice/886370fe658f41b498d40fb34ae76ff9?tpId=13
  * @Version 1.0

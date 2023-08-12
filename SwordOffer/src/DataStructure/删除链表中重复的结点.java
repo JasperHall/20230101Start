@@ -1,3 +1,5 @@
+package DataStructure;
+
 import javax.sound.midi.MidiFileFormat;
 
 /**

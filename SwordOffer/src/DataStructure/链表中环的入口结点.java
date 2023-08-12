@@ -1,3 +1,5 @@
+package DataStructure;
+
 import sun.awt.image.ImageWatched;
 
 import java.util.LinkedList;
