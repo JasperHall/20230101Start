@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 /**
+ * https://kamacoder.com/problem.php?id=1009
  * @Version 1.0
  * @Author:MenFanys
  * @Date:2023/8/20 20:44
