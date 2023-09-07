@@ -1,7 +1,5 @@
 package list;
 
-import javax.jnlp.ClipboardService;
-
 /**
  * https://www.nowcoder.com/practice/267c0deb9a6a41e4bdeb1b2addc64c93?tpId=354
  * @Version 1.0
