@@ -1,3 +1,5 @@
+package kamacoder;
+
 import javax.annotation.processing.SupportedSourceVersion;
 import java.util.List;
 import java.util.Scanner;

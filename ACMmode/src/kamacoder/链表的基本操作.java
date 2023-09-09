@@ -1,3 +1,5 @@
+package kamacoder;
+
 import javafx.geometry.Side;
 
 import java.util.Scanner;

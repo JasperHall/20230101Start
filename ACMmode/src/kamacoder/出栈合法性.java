@@ -1,3 +1,5 @@
+package kamacoder;
+
 import javafx.scene.web.WebHistory;
 
 import java.util.Scanner;

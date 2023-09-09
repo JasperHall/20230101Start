@@ -1,3 +1,5 @@
+package kamacoder;
+
 import java.util.Scanner;
 
 /**
